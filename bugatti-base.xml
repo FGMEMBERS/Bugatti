@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <sim include="Nasal/views.xml">
+
+  <author>BARANGER Emmanuel (3D)</author>
+  <aircraft-version>0.1</aircraft-version>
+  <status>Alpha</status>
+
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <sound>
+   <path>Aircraft/Bugatti/Sounds/bugatti-sound.xml</path>
+  </sound>
+
+  <model>
+   <path>Aircraft/Bugatti/Models/bugatti.xml</path>
+  </model>
+
+  <startup>
+   <splash-texture>Aircraft/Bugatti/bugatti-splash.rgb</splash-texture>
+  </startup>
+  
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+
+ </sim>
+
+ <controls>
+  <engines>
+   <engine n="0">
+    <magnetos>3</magnetos>
+   </engine>
+   <engine n="1">
+    <magnetos>3</magnetos>
+   </engine>
+  </engines>
+ </controls>
+
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <level-gal_us archive="y">20</level-gal_us>
+   </tank>
+   <tank n="1">
+    <level-gal_us archive="y">20</level-gal_us>
+   </tank>
+   <tank n="2">
+    <level-gal_us archive="y">15</level-gal_us>
+   </tank>
+   <tank n="3">
+    <level-gal_us archive="y">15</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+ 
+ <engines>
+  <engine n="0">
+   <rpm>100</rpm>
+  </engine>
+  <engine n="1">
+   <rpm>100</rpm>
+  </engine>
+ </engines>
+
+ <input>
+   <keyboard include="Nasal/bugatti-keyboard.xml"/>
+ </input>
+ 
+ <nasal>
+   <bugatti>
+     <file>Aircraft/Bugatti/Nasal/doors.nas</file>
+   </bugatti>
+ </nasal>
+  
+</PropertyList>
