@@ -4,11 +4,39 @@
 
  <sim include="Nasal/views.xml">
 
-  <author>BARANGER Emmanuel (3D)</author>
-  <aircraft-version>0.1</aircraft-version>
+  <author>Emmanuel BARANGER (3D/FMD), Pierre GEOFFROY (FDM)</author>
+  <aircraft-version>0.2</aircraft-version>
   <status>Alpha</status>
 
   <fuel-fraction>1.0</fuel-fraction>
+
+<!-- Volet et spoilers
+
+     Position 0 : Position normal vol de croisière
+     Position 1 : Position décollage et montée
+     Position 2 : Position vol rapide
+     Position 3 : Position vol en piqué, aérofreins
+     Position 4 : Position basse vitesse, atterrissage
+     Position 5 : Position roulage au sol
+-->
+     
+    <flaps>
+      <setting> 0.00</setting>
+      <setting> 0.30</setting>
+      <setting>-0.30</setting>
+      <setting> 0.30</setting>
+      <setting> 0.50</setting>
+      <setting> 0.00</setting>
+    </flaps>
+
+    <spoilers>
+      <setting> 0.00</setting>
+      <setting>-0.30</setting>
+      <setting> 0.30</setting>
+      <setting> 0.40</setting>
+      <setting> 0.00</setting>
+      <setting> 0.50</setting>
+    </spoilers>
 
   <sound>
    <path>Aircraft/Bugatti/Sounds/bugatti-sound.xml</path>

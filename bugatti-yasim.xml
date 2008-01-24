@@ -1,20 +1,21 @@
-<!-- Bugatti Model 100
+<!-- Bugatti Model 100 Emmanuel BARANGER
+                       Pierre GEOFFROY
 
   Poids 1200 Kg -> 2646 lb 
   
 -->
 <airplane mass="2646">
 
-<approach speed="62" aoa="18">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
+<approach speed="62" aoa="8">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
   <control-setting axis="/controls/flight/flaps" value="1.0"/>
   <control-setting axis="/controls/gear/gear-down" value="1"/>
 </approach>
 
-<cruise speed="343" alt="5000">
+<cruise speed="435" alt="5000">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
@@ -35,14 +36,17 @@
       sweep="-19" 
       dihedral="4" 
       twist="-3">
-      <stall aoa="14" width="6" peak="1.5"/>
-      <flap0 start="0.05" end=".65" lift="1.9" drag="1.5"/>
-      <flap1 start="0.38" end="0.97" lift="1.2" drag="1.2"/>
+      <stall aoa="10" width="6" peak="1.5"/>
+      <spoiler start="0.176" end="0.568" lift="0.6" drag="10"/>
+      <flap0 start="0.176" end="0.568" lift="1.4" drag="1.5"/>
+      <flap1 start="0.587" end="0.948" lift="1.2" drag="1.2"/>
       
-      <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+      <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
+      <control-input axis="/controls/flight/flaps" control="FLAP0" invert="true"/>
       <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
       <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
       
+      <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>  
       <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
       <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
       <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
@@ -53,7 +57,7 @@
        chord="1.476" 
        taper="0.13" 
        dihedral="25"> 
-       <stall aoa="14" width="3" peak="1.5"/>
+       <stall aoa="10" width="3" peak="1.5"/>
        <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
        
        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
@@ -66,7 +70,7 @@
        length="0.672" 
        chord="1.370" 
        taper="0.13"> 
-       <stall aoa="14" width="3" peak="1.5"/>
+       <stall aoa="10" width="3" peak="1.5"/>
        <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
        
        <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
@@ -80,17 +84,20 @@
      220 Kg
 -->
 <propeller x="0.960" y="0" z="0.208"
-           mass="485" 
-	   moment="100" 
-	   radius="1.0"
-           cruise-power="400" 
-	   cruise-speed="300"
-           cruise-rpm="4000" 
-	   cruise-alt="5000"
-	   contra="1">
+           	mass="543" 
+	   	moment="24" 
+	   	radius="0.8"
+           	cruise-power="330" 
+	   	cruise-speed="343"
+          	cruise-rpm="2100" 
+	   	cruise-alt="5000"
+		takeoff-power="450"
+		takeoff-rpm="2800"
+		gear-ratio="0.62"
+	   	contra="1">
            <piston-engine eng-rpm="4500" 
                           eng-power="450"
-                          displacement="1000" 
+                          displacement="287" 
                           compression="5.0"/>
 	   <actionpt x="3.441" y="0" z="0.182"/>
 	   
@@ -101,17 +108,20 @@
 </propeller>
 
 <propeller x="0.695" y="0" z="0.208"
-           mass="485" 
-	   moment="100" 
-	   radius="1.0"
-           cruise-power="400" 
-	   cruise-speed="300"
-           cruise-rpm="4000" 
-	   cruise-alt="5000"
-	   contra="1">
+           	mass="543" 
+	   	moment="34" 
+	   	radius="0.8"
+           	cruise-power="330" 
+	   	cruise-speed="343"
+           	cruise-rpm="2100" 
+	   	cruise-alt="5000"
+		takeoff-power="450"
+		takeoff-rpm="2800"
+		gear-ratio="0.62"
+	   	contra="1">
            <piston-engine eng-rpm="4500" 
                           eng-power="450"
-                          displacement="1000" 
+                          displacement="287" 
                           compression="5.0"/>
            <actionpt x="3.708" y="0" z="0.182"/>
 	   

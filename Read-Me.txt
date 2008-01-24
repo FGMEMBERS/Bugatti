@@ -6,8 +6,8 @@ English/Français
 A little history
 ================
 
-Bugatti model 100
-=================
+Bugatti model 100P
+==================
 
 Manufacturer                  : Bugatti
 Type                          : Racer
@@ -27,9 +27,12 @@ Some useful keys:
 Thanks
 ======
 
+Pierre GEOFFROY for this help on FDM
+
 ===============
 BARANGER Emmanuel
 Setpember, 09, 2007. 
+January, 24, 2008.
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
@@ -41,8 +44,8 @@ embaranger@free.fr
 Un peu d'histoire
 =================
 
-Bugatti model 100
-=================
+Bugatti model 100P
+==================
 
 Constructeur                  : Bugatti
 Type                          : Avion de course
@@ -63,9 +66,12 @@ Quelques touches utiles :
 Remerciements
 =============
 
+Pierre GEOFFRY pour son aide sur le FDM
+
 ===============
 BARANGER Emmanuel
 09 Septembre 2007.
+24 Janvier   2008.
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr

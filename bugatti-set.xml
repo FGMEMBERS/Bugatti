@@ -4,8 +4,8 @@
 <PropertyList include="bugatti-yasim-set.xml">
 
   <sim>
-    <description>Bugatti model 100</description>
-    <author>Emmanuel BARANGER</author>
+    <description>Bugatti model 100P</description>
+    <author>Emmanuel BARANGER (3D/FDM), Pierre GEOFFROY (FDM)</author>
   </sim>
 
 </PropertyList>

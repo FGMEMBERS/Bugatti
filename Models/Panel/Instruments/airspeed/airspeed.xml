@@ -19,19 +19,18 @@
   <type>rotate</type>
   <object-name>Needle1</object-name>
   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-  <factor> 1.852 </factor>
   <interpolation>
    <entry>
     <ind>0</ind>
     <dep>0</dep>
    </entry>
    <entry>
-    <ind>86.95</ind>
-    <dep>26</dep>
+    <ind>269.98</ind>
+    <dep>180</dep>
    </entry>
    <entry>
-    <ind>608.69</ind>
-    <dep>334</dep>
+    <ind>539.96</ind>
+    <dep>335</dep>
    </entry>
   </interpolation>
   <axis>
