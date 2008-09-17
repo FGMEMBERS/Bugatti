@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<!-- <PropertyList include="bugatti-jsbsim-set.xml"> -->
-<PropertyList include="bugatti-yasim-set.xml">
+<!-- <PropertyList include="bugatti-jsbsim-cnf.xml"> -->
+<PropertyList include="bugatti-yasim-cnf.xml">
 
   <sim>
     <description>Bugatti model 100P</description>

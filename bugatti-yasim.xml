@@ -84,23 +84,22 @@
      220 Kg
 -->
 <propeller x="0.960" y="0" z="0.208"
-           	mass="543" 
-	   	moment="24" 
-	   	radius="0.8"
-           	cruise-power="330" 
-	   	cruise-speed="343"
-          	cruise-rpm="2100" 
-	   	cruise-alt="5000"
-		takeoff-power="450"
-		takeoff-rpm="2800"
-		gear-ratio="0.62"
-	   	contra="1">
+           mass="543" 
+           moment="34" 
+           radius="0.8"
+           cruise-power="330" 
+           cruise-speed="343"
+           cruise-rpm="2100" 
+           cruise-alt="5000"
+           takeoff-power="450"
+           takeoff-rpm="2800"
+           gear-ratio="0.62"
+           contra="1">
            <piston-engine eng-rpm="4500" 
                           eng-power="450"
                           displacement="287" 
                           compression="5.0"/>
-	   <actionpt x="3.441" y="0" z="0.182"/>
-	   
+           <actionpt x="3.441" y="0" z="0.182"/>
            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -108,23 +107,22 @@
 </propeller>
 
 <propeller x="0.695" y="0" z="0.208"
-           	mass="543" 
-	   	moment="34" 
-	   	radius="0.8"
-           	cruise-power="330" 
-	   	cruise-speed="343"
-           	cruise-rpm="2100" 
-	   	cruise-alt="5000"
-		takeoff-power="450"
-		takeoff-rpm="2800"
-		gear-ratio="0.62"
-	   	contra="1">
+           mass="543" 
+           moment="-34" 
+           radius="0.8"
+           cruise-power="330" 
+           cruise-speed="343"
+           cruise-rpm="2100" 
+           cruise-alt="5000"
+           takeoff-power="450"
+           takeoff-rpm="2800"
+           gear-ratio="0.62"
+           contra="1">
            <piston-engine eng-rpm="4500" 
                           eng-power="450"
                           displacement="287" 
                           compression="5.0"/>
            <actionpt x="3.708" y="0" z="0.182"/>
-	   
            <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
            <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
            <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>

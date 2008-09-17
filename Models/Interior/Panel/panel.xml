@@ -5,7 +5,7 @@
   <path>panel.ac</path>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/rpm/rpm1.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
     <offsets>
       <x-m> 0.015 </x-m>
       <y-m> 0.115 </y-m>
@@ -14,7 +14,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/rpm/rpm2.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/rpm/rpm2.xml</path>
     <offsets>
       <x-m>  0.015 </x-m>
       <y-m> -0.115 </y-m>
@@ -23,7 +23,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/airspeed/airspeed.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/airspeed/airspeed.xml</path>
     <offsets>
       <x-m>  0.015 </x-m>
       <y-m>  0.110 </y-m>
@@ -32,7 +32,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/vsi/vsi.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m>  0.015 </x-m>
       <y-m> -0.110 </y-m>
@@ -41,7 +41,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/turn/turn.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
       <x-m> 0.015 </x-m>
       <y-m> 0.000 </y-m>
@@ -50,7 +50,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/oilpressure/oilpressure1.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/oilpressure/oilpressure1.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  0.197 </y-m>
@@ -59,7 +59,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/oiltemp/oiltemp1.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/oiltemp/oiltemp1.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  0.197 </y-m>
@@ -68,7 +68,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/oilpressure/oilpressure2.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/oilpressure/oilpressure2.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -0.197 </y-m>
@@ -77,7 +77,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bugatti/Models/Panel/Instruments/oiltemp/oiltemp2.xml</path>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/Instruments/oiltemp/oiltemp2.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -0.197 </y-m>

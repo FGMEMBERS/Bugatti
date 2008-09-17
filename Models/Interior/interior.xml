@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Bugatti/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.025 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.405 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.272 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+
