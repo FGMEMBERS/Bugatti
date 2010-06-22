@@ -18,24 +18,23 @@
      Position 4 : Position basse vitesse, atterrissage
      Position 5 : Position roulage au sol
 -->
+    <spoiler>
+      <setting> 0.00 </setting>
+      <setting> 0.20 </setting>
+      <setting> 0.40 </setting>
+      <setting> 0.60 </setting>
+      <setting> 0.80 </setting>
+      <setting> 1.00 </setting>
+    </spoiler>
 
     <flaps>
-      <setting> 0.00</setting>
-      <setting> 0.30</setting>
-      <setting>-0.30</setting>
-      <setting> 0.30</setting>
-      <setting> 0.50</setting>
-      <setting> 0.00</setting>
+      <setting> 0.00 </setting>
+      <setting> 0.20 </setting>
+      <setting> 0.40 </setting>
+      <setting> 0.60 </setting>
+      <setting> 0.80 </setting>
+      <setting> 1.00 </setting>
     </flaps>
-
-    <spoilers>
-      <setting> 0.00</setting>
-      <setting>-0.30</setting>
-      <setting> 0.30</setting>
-      <setting> 0.40</setting>
-      <setting> 0.00</setting>
-      <setting> 0.50</setting>
-    </spoilers>
 
     <sound>
       <path>Aircraft/Bugatti/Sounds/bugatti-sound.xml</path>
@@ -61,6 +60,8 @@
         <int type="int">0</int>
         <int type="int">0</int>
         <int type="int">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -76,53 +77,19 @@
 
   </sim>
 
-  <controls>
-    <engines>
-      <engine n="0">
-        <magnetos>3</magnetos>
-      </engine>
-      <engine n="1">
-        <magnetos>3</magnetos>
-      </engine>
-    </engines>
-  </controls>
-
-  <consumables>
-    <fuel>
-      <tank n="0">
-        <level-gal_us archive="y">20</level-gal_us>
-      </tank>
-      <tank n="1">
-        <level-gal_us archive="y">20</level-gal_us>
-      </tank>
-      <tank n="2">
-        <level-gal_us archive="y">15</level-gal_us>
-      </tank>
-      <tank n="3">
-        <level-gal_us archive="y">15</level-gal_us>
-      </tank>
-    </fuel>
-  </consumables>
- 
-  <engines>
-    <engine n="0">
-      <rpm>100</rpm>
-    </engine>
-    <engine n="1">
-      <rpm>100</rpm>
-    </engine>
-  </engines>
-
   <input>
     <keyboard include="Nasal/bugatti-keyboard.xml"/>
   </input>
 
   <nasal>
-    <bugatti>
+    <doors>
       <file>Aircraft/Bugatti/Nasal/doors.nas</file>
+    </doors>
+    <bugatti>
       <file>Aircraft/Bugatti/Nasal/light.nas</file>
       <file>Aircraft/Bugatti/Nasal/liveries.nas</file>
     </bugatti>
   </nasal>
 
 </PropertyList>
+

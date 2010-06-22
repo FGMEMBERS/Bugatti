@@ -25,7 +25,6 @@
     <object-name>voletGH</object-name>
     <object-name>voletDH</object-name>
     <object-name>derive</object-name>
-    <object-name>air</object-name>
     <object-name>direction</object-name>
     <object-name>profondeurG</object-name>
     <object-name>profondeurD</object-name>
@@ -57,22 +56,6 @@
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>propdisc1</object-name>
-    <object-name>propblur1</object-name>
-    <object-name>propdisc2</object-name>
-    <object-name>propblur2</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>sortie</object-name>
@@ -84,7 +67,6 @@
     <object-name>voletGH</object-name>
     <object-name>voletDH</object-name>
     <object-name>derive</object-name>
-    <object-name>air</object-name>
     <object-name>direction</object-name>
     <object-name>profondeurG</object-name>
     <object-name>profondeurD</object-name>
@@ -139,6 +121,48 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>sortie</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletGB</object-name>
+    <object-name>voletDB</object-name>
+    <object-name>voletGH</object-name>
+    <object-name>voletDH</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>profondeurG</object-name>
+    <object-name>profondeurD</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteG3</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+    <object-name>porteD3</object-name>
+    <object-name>pate</object-name>
+    <object-name>bol1</object-name>
+    <object-name>bol2</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propblur1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propblur2</object-name>
   </animation>
 
   <!-- Interieur -->
@@ -291,7 +315,7 @@
     <type>rotate</type>
     <object-name>profondeurG</object-name>
     <property>controls/flight/elevator</property>
-    <factor>-20</factor>
+    <factor> -20 </factor>
     <axis>
       <x1-m>  3.290 </x1-m>
       <y1-m> -0.121 </y1-m>
@@ -306,7 +330,7 @@
     <type>rotate</type>
     <object-name>profondeurD</object-name>
     <property>controls/flight/elevator</property>
-    <factor>-20</factor>
+    <factor> -20 </factor>
     <axis>
       <x1-m>  3.290 </x1-m>
       <y1-m>  1.276 </y1-m>
@@ -322,7 +346,7 @@
     <type>rotate</type>
     <object-name>direction</object-name>
     <property>controls/flight/rudder</property>
-    <factor>20</factor>
+    <factor> 20 </factor>
     <axis>
       <x1-m>  3.351 </x1-m>
       <y1-m>  0.000 </y1-m>
@@ -337,7 +361,7 @@
     <type>rotate</type>
     <object-name>profondeurG</object-name>
     <property>controls/flight/rudder</property>
-    <factor>-15</factor>
+    <factor> -15 </factor>
     <axis>
       <x1-m>  3.290 </x1-m>
       <y1-m> -0.121 </y1-m>
@@ -352,7 +376,7 @@
     <type>rotate</type>
     <object-name>profondeurD</object-name>
     <property>controls/flight/rudder</property>
-    <factor>15</factor>
+    <factor> 15 </factor>
     <axis>
       <x1-m>  3.290 </x1-m>
       <y1-m>  1.276 </y1-m>
@@ -368,7 +392,7 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>-15.0</factor>
+    <factor> -15 </factor>
     <axis>
       <x1-m> -0.018 </x1-m>
       <y1-m> -2.591 </y1-m>
@@ -383,7 +407,7 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
-    <factor>-15.0</factor>
+    <factor> -15 </factor>
     <axis>
       <x1-m> -0.658 </x1-m>
       <y1-m>  3.950 </y1-m>
@@ -399,7 +423,14 @@
     <type>rotate</type>
     <object-name>voletGB</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-30.0</factor>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep> -20 </dep></entry>
+      <entry><ind> 0.40 </ind><dep>  25 </dep></entry>
+      <entry><ind> 0.60 </ind><dep> -45 </dep></entry>
+      <entry><ind> 0.80 </ind><dep> -50 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>   0 </dep></entry>
+    </interpolation>
     <axis>
       <x1-m>  0.615 </x1-m>
       <y1-m> -1.034 </y1-m>
@@ -414,7 +445,14 @@
     <type>rotate</type>
     <object-name>voletDB</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-30.0</factor>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep> -20 </dep></entry>
+      <entry><ind> 0.40 </ind><dep>  25 </dep></entry>
+      <entry><ind> 0.60 </ind><dep> -45 </dep></entry>
+      <entry><ind> 0.80 </ind><dep> -50 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>   0 </dep></entry>
+    </interpolation>
     <axis>
       <x1-m>  0.068 </x1-m>
       <y1-m>  2.524 </y1-m>
@@ -429,8 +467,15 @@
   <animation>
     <type>rotate</type>
     <object-name>voletGH</object-name>
-    <property>surface-positions/speedbrake-pos-norm</property>
-    <factor>30.0</factor>
+    <property>surface-positions/spoiler-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep> -25 </dep></entry>
+      <entry><ind> 0.40 </ind><dep>  20 </dep></entry>
+      <entry><ind> 0.60 </ind><dep>  45 </dep></entry>
+      <entry><ind> 0.80 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>  50 </dep></entry>
+    </interpolation>
     <axis>
       <x1-m>  0.615 </x1-m>
       <y1-m> -1.034 </y1-m>
@@ -444,8 +489,15 @@
   <animation>
     <type>rotate</type>
     <object-name>voletDH</object-name>
-    <property>surface-positions/speedbrake-pos-norm</property>
-    <factor>30.0</factor>
+    <property>surface-positions/spoiler-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep> -25 </dep></entry>
+      <entry><ind> 0.40 </ind><dep>  20 </dep></entry>
+      <entry><ind> 0.60 </ind><dep>  45 </dep></entry>
+      <entry><ind> 0.80 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>  50 </dep></entry>
+    </interpolation>
     <axis>
       <x1-m> 0.068 </x1-m>
       <y1-m> 2.524 </y1-m>
