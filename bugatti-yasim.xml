@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Bugatti Model 100 Emmanuel BARANGER
-     Based on Hughes H1 FDM for the moment
+<!-- Bugatti Model 100 Emmanuel BARANGER 2010
 
      sources   : http://pagesperso-orange.fr/morlock68/bugatti.htm
 
@@ -17,7 +16,7 @@
 <airplane mass="2646">
 
   <!-- Approach configuration -->
-  <approach speed="75" aoa="4">
+  <approach speed="75" aoa="6">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.55"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.6"/>
@@ -51,11 +50,11 @@
         taper="0.2"
         dihedral="3"
         sweep="-16"
-        camber="0.01">
-        <stall aoa="14" width="5" peak="1.5"/>
-        <flap0 start="0.166" end="0.564" lift="1.7" drag="1.9"/>
-        <flap1 start="0.590" end="0.950" lift="1.4" drag="1.1"/>
-        <spoiler start="0.590" end="0.950"  lift="1.4" drag="1.1"/>
+        camber="0.012">
+        <stall   aoa="14"      width="5"   peak="1.5"/>
+        <flap0   start="0.166" end="0.564" lift="1.7" drag="1.9"/>
+        <flap1   start="0.590" end="0.950" lift="1.4" drag="1.1"/>
+        <spoiler start="0.590" end="0.950" lift="1.4" drag="1.1"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
@@ -74,8 +73,8 @@
          taper="0.15"
          sweep="6"
          dihedral="28">
-         <stall aoa="17" width="8" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.55" drag="1.3"/>
+         <stall aoa="12"  width="8" peak="1.5"/>
+         <flap0 start="0" end="1"   lift="1.55" drag="1.3"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -89,8 +88,8 @@
          taper="0.20"
          dihedral="-90"
 	 sweep="15">
-         <stall aoa="15" width="4" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.3" drag="1.3"/>
+         <stall aoa="12"  width="4" peak="1.5"/>
+         <flap0 start="0" end="1"   lift="1.3" drag="1.3"/>
 
          <control-input axis="/controls/flight/rudder" square="true" control="FLAP0"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -196,13 +195,10 @@
         <control-speed control="EXTEND" transition-time="5.1"/>
   </gear>
 
-  <tank x="0.190" y="1.15" z="0" capacity="482.5"/>
-  <tank x="0.190" y="-1.15" z="0" capacity="482.5"/>
+  <tank x="0.05" y="1.15" z="0" capacity="482.5"/>
+  <tank x="0.05" y="-1.15" z="0" capacity="482.5"/>
 
-  <!-- pilot
-  <ballast x="-0.5" y="0" z="-0.3" mass="180"/>  -->
-
-  <!-- Move CG 
-  <ballast x="-0.8" y="0" z="-4.0" mass="1400"/> -->
+  <!-- Move CG
+  <ballast x="-0.1" y="0" z="-1" mass="1000"/> -->
 
 </airplane>
