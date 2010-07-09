@@ -378,7 +378,7 @@
     <type>rotate</type>
     <object-name>profondeurG</object-name>
     <property>controls/flight/rudder</property>
-    <factor> -15 </factor>
+    <factor> 10 </factor>
     <axis>
       <x1-m>  3.290 </x1-m>
       <y1-m> -0.121 </y1-m>
@@ -393,7 +393,7 @@
     <type>rotate</type>
     <object-name>profondeurD</object-name>
     <property>controls/flight/rudder</property>
-    <factor> 15 </factor>
+    <factor> -10 </factor>
     <axis>
       <x1-m>  3.290 </x1-m>
       <y1-m>  1.276 </y1-m>
@@ -419,6 +419,34 @@
       <z2-m>  0.173 </z2-m>
     </axis>
   </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>voletGB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> -5 </factor>
+    <axis>
+      <x1-m>  0.615 </x1-m>
+      <y1-m> -1.034 </y1-m>
+      <z1-m> -0.048 </z1-m>
+      <x2-m>  0.068 </x2-m>
+      <y2-m> -2.524 </y2-m>
+      <z2-m>  0.025 </z2-m>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>voletGH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> -5 </factor>
+    <axis>
+      <x1-m>  0.615 </x1-m>
+      <y1-m> -1.034 </y1-m>
+      <z1-m>  0.048 </z1-m>
+      <x2-m>  0.068 </x2-m>
+      <y2-m> -2.524 </y2-m>
+      <z2-m>  0.100 </z2-m>
+    </axis>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -434,7 +462,35 @@
       <z2-m>  0.068 </z2-m>
     </axis>
   </animation>
-
+  <animation>
+    <type>rotate</type>
+    <object-name>voletDB</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> -5 </factor>
+    <axis>
+      <x1-m>  0.068 </x1-m>
+      <y1-m>  2.524 </y1-m>
+      <z1-m>  0.025 </z1-m>
+      <x2-m>  0.615 </x2-m>
+      <y2-m>  1.034 </y2-m>
+      <z2-m> -0.048 </z2-m>
+    </axis>
+</animation>
+ <animation>
+    <type>rotate</type>
+    <object-name>voletDH</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> -5 </factor>
+    <axis>
+      <x1-m> 0.068 </x1-m>
+      <y1-m> 2.524 </y1-m>
+      <z1-m> 0.100 </z1-m>
+      <x2-m> 0.615 </x2-m>
+      <y2-m> 1.034 </y2-m>
+      <z2-m> 0.048 </z2-m>
+    </axis>
+  </animation>
+  
   <!-- Volets -->
   <animation>
     <type>rotate</type>
@@ -442,11 +498,11 @@
     <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
-      <entry><ind> 0.20 </ind><dep> -20 </dep></entry>
-      <entry><ind> 0.40 </ind><dep>  25 </dep></entry>
-      <entry><ind> 0.60 </ind><dep> -45 </dep></entry>
-      <entry><ind> 0.80 </ind><dep> -50 </dep></entry>
-      <entry><ind> 1.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep> -10 </dep></entry>
+      <entry><ind> 0.40 </ind><dep> -20 </dep></entry>
+      <entry><ind> 0.60 </ind><dep> -35 </dep></entry>
+      <entry><ind> 0.80 </ind><dep> -45 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> -56 </dep></entry>
     </interpolation>
     <axis>
       <x1-m>  0.615 </x1-m>
@@ -457,6 +513,27 @@
       <z2-m>  0.025 </z2-m>
     </axis>
   </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>voletGH</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep>  -9.5 </dep></entry>
+      <entry><ind> 0.40 </ind><dep>  -19 </dep></entry>
+      <entry><ind> 0.60 </ind><dep>  -33 </dep></entry>
+      <entry><ind> 0.80 </ind><dep>  -41 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>  -50 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  0.615 </x1-m>
+      <y1-m> -1.034 </y1-m>
+      <z1-m>  0.048 </z1-m>
+      <x2-m>  0.068 </x2-m>
+      <y2-m> -2.524 </y2-m>
+      <z2-m>  0.100 </z2-m>
+    </axis>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -464,11 +541,11 @@
     <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
-      <entry><ind> 0.20 </ind><dep> -20 </dep></entry>
-      <entry><ind> 0.40 </ind><dep>  25 </dep></entry>
-      <entry><ind> 0.60 </ind><dep> -45 </dep></entry>
-      <entry><ind> 0.80 </ind><dep> -50 </dep></entry>
-      <entry><ind> 1.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep> -10 </dep></entry>
+      <entry><ind> 0.40 </ind><dep> -20 </dep></entry>
+      <entry><ind> 0.60 </ind><dep> -35 </dep></entry>
+      <entry><ind> 0.80 </ind><dep> -45 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> -56 </dep></entry>
     </interpolation>
     <axis>
       <x1-m>  0.068 </x1-m>
@@ -477,6 +554,27 @@
       <x2-m>  0.615 </x2-m>
       <y2-m>  1.034 </y2-m>
       <z2-m> -0.048 </z2-m>
+    </axis>
+</animation>
+ <animation>
+    <type>rotate</type>
+    <object-name>voletDH</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.20 </ind><dep>  -9.5 </dep></entry>
+      <entry><ind> 0.40 </ind><dep>  -19 </dep></entry>
+      <entry><ind> 0.60 </ind><dep>  -33 </dep></entry>
+      <entry><ind> 0.80 </ind><dep>  -41 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>  -50 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 0.068 </x1-m>
+      <y1-m> 2.524 </y1-m>
+      <z1-m> 0.100 </z1-m>
+      <x2-m> 0.615 </x2-m>
+      <y2-m> 1.034 </y2-m>
+      <z2-m> 0.048 </z2-m>
     </axis>
   </animation>
 
@@ -487,10 +585,10 @@
     <property>surface-positions/spoiler-pos-norm</property>
     <interpolation>
       <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
-      <entry><ind> 0.20 </ind><dep> -25 </dep></entry>
+      <entry><ind> 0.20 </ind><dep>  10 </dep></entry>
       <entry><ind> 0.40 </ind><dep>  20 </dep></entry>
-      <entry><ind> 0.60 </ind><dep>  45 </dep></entry>
-      <entry><ind> 0.80 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.60 </ind><dep>  30 </dep></entry>
+      <entry><ind> 0.80 </ind><dep>  40 </dep></entry>
       <entry><ind> 1.00 </ind><dep>  50 </dep></entry>
     </interpolation>
     <axis>
@@ -509,10 +607,10 @@
     <property>surface-positions/spoiler-pos-norm</property>
     <interpolation>
       <entry><ind> 0.00 </ind><dep>   0 </dep></entry>
-      <entry><ind> 0.20 </ind><dep> -25 </dep></entry>
+      <entry><ind> 0.20 </ind><dep>  10 </dep></entry>
       <entry><ind> 0.40 </ind><dep>  20 </dep></entry>
-      <entry><ind> 0.60 </ind><dep>  45 </dep></entry>
-      <entry><ind> 0.80 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.60 </ind><dep>  30 </dep></entry>
+      <entry><ind> 0.80 </ind><dep>  40 </dep></entry>
       <entry><ind> 1.00 </ind><dep>  50 </dep></entry>
     </interpolation>
     <axis>
