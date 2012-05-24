@@ -27,12 +27,13 @@ Some useful keys:
 Thanks
 ======
 
-Pierre GEOFFROY for this help on FDM
+Philippe BROCORENS (OO-ZVY) for this help on FDM and automation
 
 ===============
 BARANGER Emmanuel
-Setpember, 09, 2007. 
-January, 24, 2008.
+Setpember, 09, 2007
+January, 24, 2008
+May, 24, 2012
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
@@ -66,12 +67,13 @@ Quelques touches utiles :
 Remerciements
 =============
 
-Pierre GEOFFRY pour son aide sur le FDM
+Philippe BROCORENS (OO-ZVY) pour son aide sur le FDM et les automatismes
 
 ===============
 BARANGER Emmanuel
-09 Septembre 2007.
-24 Janvier   2008.
+09 Septembre 2007
+24 Janvier   2008
+24 Mai       2012
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr

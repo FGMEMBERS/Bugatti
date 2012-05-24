@@ -6,8 +6,8 @@
 
     <model>
       <livery>
-        <name type="string">Default</name>
-        <texture>texture.png</texture>
+        <name type="string">OO ZVY</name>
+        <texture>Liveries/oo-zvy.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>

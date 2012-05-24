@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList include="bugatti-base.xml">
 
- <sim>
+  <sim>
 
-  <description>Bugatti 100P (YASim)</description>
-  <flight-model>yasim</flight-model>
-  <aero>bugatti-yasim</aero>
+    <description>Bugatti model 100P (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), OO ZVY (FDM/System)</author>
+    <flight-model>yasim</flight-model>
+    <aero>bugatti-yasim</aero>
 
- </sim>
+  </sim>
 
 </PropertyList>
 

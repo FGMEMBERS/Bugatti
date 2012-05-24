@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
-<!-- Bugatti Model 100 Emmanuel BARANGER 2010
+<!-- Bugatti Model 100 : Emmanuel BARANGER 2010
+            updated by : OO ZVY            2012
 
      sources   : http://pagesperso-orange.fr/morlock68/bugatti.htm
 
@@ -160,11 +161,12 @@
         spring="0.8"
         damp="1.2"
         sfric="1"
-        dfric="1">
+        dfric="1"
+        reduce-friction-by-extension="0.7">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="5.1"/>
+        <control-speed control="EXTEND" transition-time="4.1"/>
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
   </gear>
 
@@ -174,11 +176,12 @@
         spring="0.8"
         damp="1.2"
         sfric="1"
-        dfric="1">
+        dfric="1"
+        reduce-friction-by-extension="0.7">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="5.1"/>
+        <control-speed control="EXTEND" transition-time="6.1"/>
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
@@ -188,7 +191,8 @@
         spring="0.8"
         damp="1.2"
         sfric="1"
-        dfric="1">
+        dfric="1"
+        reduce-friction-by-extension="0.7">
         <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1" dst0="1" dst1="0" control="CASTERING"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>    
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
