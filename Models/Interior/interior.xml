@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Bugatti/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.025 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Bugatti/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.405 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.272 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

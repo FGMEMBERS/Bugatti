@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<!-- Bugatti Model 100 : Emmanuel BARANGER 2010
+            updated by : OO ZVY            2012
+
+     sources   : http://pagesperso-orange.fr/morlock68/bugatti.htm
+
+     wingspan         : 8.235 m    (      ft   in)
+     length           :  7.70 m    (      ft   in)
+     height           :  2.25 m    (      ft 5 in)
+     cruise speed     :   635 km/h (  343 kt     )
+     landing speed    :   115 km/h (   62 kt     )
+     max speed        :   805 km/h (  435 kt     )
+     empty weight     :  1200 Kg   ( 2646 lb     )
+     engine           : 2 x T50 B1 450 hp each at 4500 rpm
+-->
+<airplane mass="2646">
+
+  <!-- Approach configuration -->
+  <approach speed="75" aoa="6">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.55"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.55"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.6"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
+  </approach>
+
+  <!-- Cruise configuration -->
+  <cruise speed="435" alt="2000">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
+  </cruise>
+
+  <!-- eyepoint -->
+  <cockpit x="1.969" y="0" z="0.527"/>
+
+  <fuselage ax="3.860" ay="0" az="0.182" bx="-3.869" by="0" bz="0.203" width="0.820" taper="0.2" midpoint="0.3"/>
+
+  <wing x="-0.326" y="0.409" z="0"
+        chord="2.500"
+        length="3.9"
+        taper="0.2"
+        dihedral="3"
+        sweep="-16"
+        camber="0.012">
+        <stall   aoa="14"      width="5"   peak="1.5"/>
+        <flap0   start="0.166" end="0.564" lift="1.7" drag="1.9"/>
+        <flap1   start="0.590" end="0.950" lift="1.4" drag="1.1"/>
+        <spoiler start="0.590" end="0.950" lift="1.4" drag="1.1"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" prop="surface-positions/flap-pos-norm"/>
+        <control-output control="SPOILER" prop="/surface-positions/spoiler-pos-norm" invert="true" />
+        <control-output control="FLAP1" side="left"  prop="surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right"  prop="surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <hstab x="-3.118" y="0" z="0.370"
+	 chord="1.390"
+	 length="1.6"
+         taper="0.15"
+         sweep="6"
+         dihedral="28">
+         <stall aoa="12"  width="8" peak="1.5"/>
+         <flap0 start="0" end="1"   lift="1.55" drag="1.3"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-3.118" y="0" z="0.370"
+	 chord="1.390"
+	 length="0.83"
+         taper="0.20"
+         dihedral="-90"
+	 sweep="15">
+         <stall aoa="12"  width="4" peak="1.5"/>
+         <flap0 start="0" end="1"   lift="1.3" drag="1.3"/>
+
+         <control-input axis="/controls/flight/rudder" square="true" control="FLAP0"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- sources   : http://pagesperso-orange.fr/morlock68/bugatti.htm
+
+         Name         : T50 B1
+         Type         : 8 cylinders inline
+         Displacement :     in3 (     l  )
+         Weight       : 485 lb  ( 220 kg )
+         Cruise power : 343 hp at 4300 rpm
+         Max power    : 435 hp at 4500 rpm
+
+         Compression and Displacement of D520 (I have not find better :( )
+  -->
+  <propeller x="0.760" y="0" z="0.350"
+             radius="0.882"
+             mass="485"
+             moment="10"
+             cruise-alt="2000"
+             cruise-power="420"
+             cruise-speed="343"
+             cruise-rpm="4300"
+             takeoff-power="435"
+             takeoff-rpm="4500"
+             contra="1">
+             <actionpt x="3.661" y="0" z="0.178"/>
+             <piston-engine eng-power="435"
+                            eng-rpm="4500"
+                            displacement="1751"
+                            compression="5.8"/>
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  </propeller>
+
+  <propeller x="-0.750" y="0" z="0.350"
+             radius="0.882"
+             mass="485"
+             moment="-10"
+             cruise-alt="2000"
+             cruise-power="420"
+             cruise-speed="343"
+             cruise-rpm="4300"
+             takeoff-power="435"
+             takeoff-rpm="4500"
+             contra="1">
+             <actionpt x="3.476" y="0" z="0.178"/>
+             <piston-engine eng-power="435"
+                            eng-rpm="4500"
+                            displacement="1751"
+                            compression="5.8"/>
+             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
+             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+  </propeller>
+
+  <gear x="0.709" y="1.487" z="-1.158"
+        compression="0.4"
+        retract-time="5"
+        spring="0.8"
+        damp="1.2"
+        sfric="1"
+        dfric="1"
+        reduce-friction-by-extension="0.7">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="4.1"/>
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  </gear>
+
+  <gear x="0.709" y="-1.487" z="-1.158"
+        compression="0.4"
+        retract-time="5"
+        spring="0.8"
+        damp="1.2"
+        sfric="1"
+        dfric="1"
+        reduce-friction-by-extension="0.7">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="6.1"/>
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  </gear>
+
+  <gear x="-3.279" y="0" z="-0.511"
+        compression="0.2"
+        retract-time="5"
+        spring="0.8"
+        damp="1.2"
+        sfric="1"
+        dfric="1"
+        reduce-friction-by-extension="0.7">
+        <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1" dst0="1" dst1="0" control="CASTERING"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>    
+        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="5.1"/>
+  </gear>
+
+  <tank x="0.05" y="1.15" z="0" capacity="482.5"/>
+  <tank x="0.05" y="-1.15" z="0" capacity="482.5"/>
+
+  <!-- Move CG
+  <ballast x="-0.1" y="0" z="-1" mass="1000"/> -->
+
+</airplane>
